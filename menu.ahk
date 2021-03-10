@@ -8,20 +8,20 @@ Menu()
 {
 Menu, Menu, Add
 Menu, Menu, Delete
-Menu, Menu, Add, temp1, temp1
+Menu, Menu, Add, temp&1, temp1
 Menu, Menu, Add,
-Menu, Menu, Add, temp2, temp2
-Menu, Menu, Add, temp3, temp3
+Menu, Menu, Add, temp&2, temp2
+Menu, Menu, Add, temp&3, temp3
 Menu, Menu, Add,
-Menu, Menu, Add, temp4, temp4
-Menu, Menu, Add, temp5, temp5
-Menu, Menu, Add, temp6, temp6
-Menu, Menu, Add, temp7, temp7
+Menu, Menu, Add, temp&4, temp4
+Menu, Menu, Add, temp&5, temp5
+Menu, Menu, Add, temp&6, temp6
+Menu, Menu, Add, temp&7, temp7
 Menu, Menu, Add,
-Menu, InsertLineMenu, Add, temp9, temp9
-Menu, InsertLineMenu, Add, temp10, temp10
-Menu, Menu, Add, temp8, :InsertLineMenu
-Menu, Menu, Default, temp1
+Menu, InsertLineMenu, Add, temp&9, temp9
+Menu, InsertLineMenu, Add, temp&10, temp10
+Menu, Menu, Add, temp&8, :InsertLineMenu
+Menu, Menu, Default, temp&1
 Menu, Menu, Show
 return
 }
