@@ -15,15 +15,49 @@ Menu, Menu, Add, temp&3, temp3
 Menu, Menu, Add,
 Menu, Menu, Add, temp&4, temp4
 Menu, Menu, Add, temp&5, temp5
-Menu, Menu, Add, temp&6, temp6
-Menu, Menu, Add, temp&7, temp7
+Menu, Menu, Add, &File Sorter, file_sorter
+Menu, autocorrect, Add, Autocorrect &Enable, autocorrect_enable
+Menu, autocorrect, Add, Autocorrect &Disable, autocorrect_disable
+Menu, Menu, Add, &Autocorrect, :autocorrect
 Menu, Menu, Add,
-Menu, InsertLineMenu, Add, temp&9, temp9
-Menu, InsertLineMenu, Add, temp&10, temp10
-Menu, Menu, Add, temp&8, :InsertLineMenu
+Menu, sticky_script, Add, Sticky Shift &Enable, sticky_script_enable
+Menu, sticky_script, Add, Sticky Shift &Disable, sticky_script_disable
+Menu, Menu, Add, &Sticky Script, :sticky_script
 Menu, Menu, Default, temp&1
 Menu, Menu, Show
 return
+} 	
+sticky_script_enable()
+{
+    Run, C:\Users\Kavin\Desktop\ahk-scripts\sticky_shift_script.ahk, C:\Users\Kavin\Desktop\ahk-scripts\ 
+}
+sticky_script_disable()
+{
+    SetTitleMatchMode, 1
+    DetectHiddenWindows, on
+    WinKill C:\Users\Kavin\Desktop\ahk-scripts\sticky_shift_script.ahk
+}
+autocorrect_enable()
+{
+    Run, C:\Users\Kavin\Desktop\ahk-scripts\autocorrect.ahk, C:\Users\Kavin\Desktop\ahk-scripts\ 
+}
+autocorrect_disable()
+{
+    SetTitleMatchMode, 1
+    DetectHiddenWindows, on
+    WinKill C:\Users\Kavin\Desktop\ahk-scripts\autocorrect.ahk
+}
+file_sorter()
+{
+    FileMove, C:\Users\Kavin\Downloads\*.jpg, C:\Users\Kavin\Downloads\Images\jpg
+    FileMove, C:\Users\Kavin\Downloads\*.png, C:\Users\Kavin\Downloads\Images\png
+    FileMove, C:\Users\Kavin\Downloads\*.gif, C:\Users\Kavin\Downloads\Images\gif
+    FileMove, C:\Users\Kavin\Downloads\*.exe, C:\Users\Kavin\Downloads\Executables\exe
+    FileMove, C:\Users\Kavin\Downloads\*.msi, C:\Users\Kavin\Downloads\Executables\msi
+    FileMove, C:\Users\Kavin\Downloads\*.rar, C:\Users\Kavin\Downloads\Compressed\rar
+    FileMove, C:\Users\Kavin\Downloads\*.zip, C:\Users\Kavin\Downloads\Compressed\zip
+    FileMove, C:\Users\Kavin\Downloads\*.pdf, C:\Users\Kavin\Downloads\PDFs
+    FileMove, C:\Users\Kavin\Downloads\*.xlsx, C:\Users\Kavin\Downloads\Excel
 }
 temp1()
 {
@@ -45,27 +79,6 @@ temp5()
 {
     MsgBox, temp5
 }
-temp6()
-{
-    MsgBox, temp6
-}
-temp7()
-{
-    MsgBox, temp7
-}
-temp8()
-{
-    MsgBox, temp8
-}
-temp9()
-{
-    MsgBox, temp9
-}
-temp10()
-{
-    MsgBox, temp10
-}
-
 page_scroll(direction)
 {
     if (direction == "PgDn"){
@@ -107,7 +120,9 @@ page_scroll(direction)
 $F2::
     KeyWait F2, T0.25
         if ErrorLevel
+        {
             Menu()
+        }
         else
         {
             KeyWait F2, D T0.10
