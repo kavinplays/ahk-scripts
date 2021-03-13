@@ -49,15 +49,16 @@ autocorrect_disable()
 }
 file_sorter()
 {
-    FileMove, C:\Users\Kavin\Downloads\*.jpg, C:\Users\Kavin\Downloads\Images\jpg
-    FileMove, C:\Users\Kavin\Downloads\*.png, C:\Users\Kavin\Downloads\Images\png
-    FileMove, C:\Users\Kavin\Downloads\*.gif, C:\Users\Kavin\Downloads\Images\gif
-    FileMove, C:\Users\Kavin\Downloads\*.exe, C:\Users\Kavin\Downloads\Executables\exe
-    FileMove, C:\Users\Kavin\Downloads\*.msi, C:\Users\Kavin\Downloads\Executables\msi
-    FileMove, C:\Users\Kavin\Downloads\*.rar, C:\Users\Kavin\Downloads\Compressed\rar
-    FileMove, C:\Users\Kavin\Downloads\*.zip, C:\Users\Kavin\Downloads\Compressed\zip
-    FileMove, C:\Users\Kavin\Downloads\*.pdf, C:\Users\Kavin\Downloads\PDFs
-    FileMove, C:\Users\Kavin\Downloads\*.xlsx, C:\Users\Kavin\Downloads\Excel
+FileMove, C:\Users\Kavin\Downloads\*.jpg, C:\Users\Kavin\Downloads\Sorted\Images\jpg
+FileMove, C:\Users\Kavin\Downloads\*.png, C:\Users\Kavin\Downloads\Sorted\Images\png
+FileMove, C:\Users\Kavin\Downloads\*.gif, C:\Users\Kavin\Downloads\Sorted\Images\gif
+FileMove, C:\Users\Kavin\Downloads\*.exe, C:\Users\Kavin\Downloads\Sorted\Executables\exe
+FileMove, C:\Users\Kavin\Downloads\*.msi, C:\Users\Kavin\Downloads\Sorted\Executables\msi
+FileMove, C:\Users\Kavin\Downloads\*.rar, C:\Users\Kavin\Downloads\Sorted\Compressed\rar
+FileMove, C:\Users\Kavin\Downloads\*.zip, C:\Users\Kavin\Downloads\Sorted\Compressed\zip
+FileMove, C:\Users\Kavin\Downloads\*.pdf, C:\Users\Kavin\Downloads\Sorted\PDFs
+FileMove, C:\Users\Kavin\Downloads\*.xlsx, C:\Users\Kavin\Downloads\Sorted\Excel
+return
 }
 temp1()
 {
