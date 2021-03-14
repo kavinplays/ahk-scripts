@@ -3,6 +3,7 @@ SendMode Input
 SetWorkingDir %A_ScriptDir%
 #SingleInstance Force
 SetBatchLines -1
+Menu, Tray, Icon, %A_ScriptDir%\icon.ico
 
 Menu()
 {
